@@ -58,7 +58,7 @@ $(document).ready(function () {
             response = JSON.stringify(response);
             // JSON.parse turns a string of JSON text into a Javascript object.
             var data = JSON.parse(response);
-            console.log(data);
+            //console.log(data);
             // destructuring data
             var country = data.sys.country;
             var city = data.name;
@@ -141,7 +141,6 @@ $(document).ready(function () {
                     background: "linear-gradient(145deg, #0d47a1, #3394e4)"
                 });
             }
-            console.log(data);
         }) // getJSON fails
             .fail(function (error) {
                 console.log(error);

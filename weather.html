@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's current weather</title>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
+        type="text/css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--Header-->
+    <header>
+        <div class="menu-bar">
+            <nav class=" navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand border rounded-circle bg-dark text-white" href="index.html">
+                    <span class="m-4"><em>Weather Now</em></span>
+                </a>
+                <button class="navbar-toggler btn-primary border-light" type="button" data-toggle="collapse"
+                    data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon border-light"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto float-right text-uppercase">
+                        <li class="nav-item bg-dark px-2 m-1 text-center">
+                            <a class="nav-link text-light" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item bg-dark px-2 m-1 text-center">
+                            <a class="nav-link text-light" href="forecast.html">Forecast</a>
+                        </li>
+                        <li class="nav-item bg-dark px-2 m-1 text-center">
+                            <a class="nav-link text-light" href="https://openweathermap.org/" target="_blank">
+                                About API
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Main section  -->
+    <main>
+        <!-- First section for status -->
+        <section id="w-status">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 text-center text-white pt-3 top">
+                        <h1 class="text-uppercase">Today's Weather</h1>
+                        <hr class="line">
+                        <h5 id="w-status-loader" class="pt-3">Loading...</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section id="w-search-for-today-weather">
+            <div class="container-fluid">
+                <div class="row text-center city-search py-1">
+                    <div class="col-sm-12">
+                        <p class="mb-0 pt-3">
+                            <label class="mb-0">Search your city*</label>
+                        </p>
+                        <input type="text" id="searchByCity" name="city" autocomplete="off"
+                            placeholder="e.g. Toronto" />
+                        <button id="searchButton" class="btn btn-primary border-light">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loader - Information loader -->
+        <div id="w-info-section-loader" class="row text-center">
+            <div class="col-sm-12 py-5 text-white shadow-lg rounded">
+                <i class="fa fa-spinner fa-spin py-3" aria-hidden="true"></i>
+                <h2>Please wait while the page is loading</h2>
+
+            </div>
+        </div>
+        <!-- Information Section -->
+        <section id="w-info-section">
+            <div class="row text-center weather-info">
+                <!-- Left -->
+                <div class="col-sm-12 col-md-4 py-1">
+                    <h2 id="w-info1">sdvf</h2>
+                    <hr class="w-info-line">
+                    <h4 id="w-info1-1">sd</h4>
+                    <hr class="w-info-line">
+                    <h5 id="w-info1-2">sd</h5>
+                    <!--</div>-->
+                </div>
+                <!-- Center -->
+                <div class="col-sm-12 col-md-4 py-1">
+                    <h5 id="w-info2-1">df</h5>
+                    <h2 id="w-info2" class="shadow-lg mx-5 pr-2 rounded">dfs</h2>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <h5 id="w-info2-1-1">dsfff</h5>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <h5 id="w-info2-1-2">dsfff</h5>
+                        </div>
+                    </div>
+                </div>
+                <!--Right-->
+                <div class="col-sm-12 col-md-4 py-1">
+                    <h6 id="w-info3-1">sd</h6>
+                    <hr class="w-info-line">
+                    <h6 id="w-info3-2">sd</h6>
+                    <hr class="w-info-line">
+                    <h6 id="w-info3-3">sd</h6>
+                    <hr class="w-info-line">
+                    <h6 id="w-info3-4">sd</h6>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--Footer-->
+    <footer id="w-footer" class="p-2 bg-primary text-white text-center">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div>Interactive FE Development</div>
+                </div>
+                <div class="col-md-4">
+                    Milestone Project - FSSD
+                </div>
+                <div class="col-md-4">
+                    &copy; 2021 Josy George
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--External JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+
+    <!--Custom Internal JS-->
+    <script type="text/javascript" src="js/countries.js"></script>
+    <script type="text/javascript" src="js/weather.js"></script>
+</body>
+
+</html>

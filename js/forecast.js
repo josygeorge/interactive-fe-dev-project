@@ -125,7 +125,7 @@ $(document).ready(function () {
                 //  temperature conversion from kelvin to celsius
                 var max_temperature = (data.daily[i].temp.max - 273.15).toFixed(0);
                 var min_temperature = (data.daily[i].temp.min - 273.15).toFixed(0);
-                var image_icon = `<img width="45px" height="40px" src="http://openweathermap.org/img/wn/${data.daily[i].weather[0].icon}@2x.png">`;
+                var image_icon = `<img width="45px" height="40px" src="https://openweathermap.org/img/wn/${data.daily[i].weather[0].icon}@2x.png">`;
                 // creating tr elements for the table
                 table += `<tr">`;
 

@@ -86,7 +86,7 @@ $(document).ready(function () {
             var weather_icon = data.weather[0].icon;
             var dayOrNight = (weather_icon.charAt(2) == 'd' ? 'Daylight' : 'Night');
 
-            var weather_icon_img = `<img id="image" src="http://openweathermap.org/img/wn/${weather_icon}@2x.png" alt="No image loaded"/>`
+            var weather_icon_img = `<img id="image" src="https://openweathermap.org/img/wn/${weather_icon}@2x.png" alt="No image loaded"/>`
             var feels_like = (data.main.feels_like - 273.15).toFixed(1);
             var temp_max = (data.main.temp_max - 273.15).toFixed(1);
             var temp_min = (data.main.temp_min - 273.15).toFixed(1);

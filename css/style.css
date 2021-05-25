@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body {
+  min-height: 70vh;
+  font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+  /* font-family: Tahoma, Verdana, Helvetica, Arial, sans-serif; */
+  background-image: linear-gradient(to right, #0d47a1, #42a5f5);
+  letter-spacing: 0.1rem;
+}
+hr.line {
+  margin: 12px auto;
+  padding: auto;
+  width: 200px;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+#w-status-loader {
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0.6rem;
+}
+.top {
+  background-image: linear-gradient(to right, #7e0da1, #42a5f5);
+}
+.city-search {
+  background-image: linear-gradient(to bottom right, #4582b4, #85aeeb);
+}
+input[type='text'] {
+  padding: 10px 20px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 4px;
+  background-color: #092857;
+  color: rgb(255, 255, 255);
+  width: 60%;
+  box-sizing: border-box;
+}
+select#dropdown {
+  padding: 6px 10px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 4px;
+  background-color: #214f94;
+  color: rgba(255, 255, 255, 0.466);
+  width: 65%;
+  box-sizing: border-box;
+}
+#w-info-section-loader i {
+  font-size: 2.5em;
+}
+/* Main weather info section */
+.weather-info {
+  padding-top: 2.5rem;
+  line-height: 0.6rem;
+  border-radius: 0px !important;
+  min-height: 60vh;
+  color: rgb(255, 255, 255);
+  background-image: linear-gradient(to right, #0d47a1, #42a5f5);
+}
+hr.w-info-line {
+  margin: auto;
+  padding: auto;
+  width: 180px;
+  border-bottom: 3px solid rgb(109, 159, 216);
+}
+#w-info1,
+#w-info1-1,
+#w-info1-2,
+#w-info2-1,
+#w-info2-1-1,
+#w-info2-1-2,
+#w-info3-1,
+#w-info3-2,
+#w-info3-3,
+#w-info3-4 {
+  margin: 1.5rem auto;
+}
+#w-info2 {
+  font-size: 42px;
+  background-color: #347ae2;
+  cursor: pointer;
+}
+
+footer {
+  height: 100%;
+}

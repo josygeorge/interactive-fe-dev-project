@@ -73,22 +73,22 @@ This section should list any major frameworks that you built your project using.
 The project has the following file structure.
 
 - index.html
-- - This has a header which, has a logo, and a nav menu
-- - Main section - which has a carousal slider and a section to browse to other pages.
-- - footer
-- - n.b. header and footer is common for all the 3 pages.
+  - This has a header which, has a logo, and a nav menu
+  - Main section - which has a carousal slider and a section to browse to other pages.
+  - footer
+    - n.b. header and footer is common for all the 3 pages.
 - weather.html
-- - it has main section (1) to search for any city, (2) based on the search a section to display the weather information.
+  - it has main section (1) to search for any city, (2) based on the search a section to display the weather information.
 - forecast.html
-- - it has main section (1) to search for any city, (2) based on the search a section to display the 7-day forecast information.
+  - it has main section (1) to search for any city, (2) based on the search a section to display the 7-day forecast information.
 - js
-- - weather.js
-- - - - This js file has all the dynamic functionality for the weather.html page.
-- - forecast.js
-- - - - This js file has all the dynamic functionality for the forecast.html page.
-- - countries.js
-- - - - This js file is a custom file which has all the country codes and it's full names. This script is used in both weather.js and forecast.js for finding country names thorugh looping functionality.
-- assets - has images for carousal slider.
+  - weather.js
+    - This js file has all the dynamic functionality for the weather.html page.
+  - forecast.js
+    - This js file has all the dynamic functionality for the forecast.html page.
+  - countries.js
+    - This js file is a custom file which has all the country codes and it's full names. This script is used in both weather.js and forecast.js for finding country names thorugh looping functionality.
+- assets -> img -> has images for carousal slider.
 - README.md
 
 ### Prerequisites

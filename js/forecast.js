@@ -50,7 +50,7 @@ $(document).ready(function () {
             .fail(function (error) {
                 console.log(error);
                 // json.error occured
-                var error_msg = 'STATUS: Error! Please try again.'
+                var error_msg = 'STATUS: Error! Please try again.';
                 $('#w-status-loader').html(error_msg);
                 $("#w-status-loader").css("color", "rgb(255, 194, 0)");
 
@@ -95,7 +95,7 @@ $(document).ready(function () {
             .fail(function (error) {
                 console.log(error);
                 // json.error occured
-                var error_msg = 'STATUS: Error! Please try again.'
+                var error_msg = 'STATUS: Error! Please try again.';
                 $('#w-status-loader').html(error_msg);
                 $("#w-status-loader").css("color", "rgb(255, 194, 0)");
 
@@ -141,7 +141,7 @@ $(document).ready(function () {
             $('#w-info-section, #w-footer').show();
             // getting full country name from the custom 'countries.js' file
             var countries = cData[0].countries;
-            var fullCountryName = ''
+            var fullCountryName = '';
             for (var x = 0; x < countries.length; x++) {
                 if (countries[x].Code == countryCode) {
                     fullCountryName = countries[x].Name;
@@ -154,7 +154,7 @@ $(document).ready(function () {
             .fail(function (error) {
                 console.log(error);
                 // json.error occured
-                var error_msg = 'STATUS: Error! Please try again.'
+                var error_msg = 'STATUS: Error! Please try again.';
                 $('#w-status-loader').html(error_msg);
                 $("#w-status-loader").css("color", "rgb(255, 194, 0)");
 

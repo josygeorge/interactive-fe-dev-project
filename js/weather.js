@@ -26,7 +26,7 @@ $(document).ready(function () {
             // calling function by passing the url as argument
             displayWeather(url_lat_lon);
             $('#w-info-section-loader').hide();
-        })
+        });
     }
 
     /* ----------------------------------------------------------------------
@@ -58,14 +58,14 @@ $(document).ready(function () {
             response = JSON.stringify(response);
             // JSON.parse turns a string of JSON text into a Javascript object.
             var data = JSON.parse(response);
-
+            console.log(data);
             // destructuring data
             var country = data.sys.country;
             var city = data.name;
 
             // getting full country name from the custom 'countries.js' file
             var countries = cData[0].countries;
-            var fullCountryName = ''
+            var fullCountryName = '';
             for (var x = 0; x < countries.length; x++) {
                 if (countries[x].Code == country) {
                     fullCountryName = countries[x].Name;
@@ -74,11 +74,13 @@ $(document).ready(function () {
 
             // Date Calculation from Unix Time
             var d = new Date((data.dt + data.timezone) * 1000 + (4 * 60 * 60 * 1000)); // add 4 hours in millisecs to match GMT timezone
-            var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
             var day = days[d.getDay()];
             var hours = (d.getHours() < 10 ? '0' : '') + d.getHours();
             var mins = (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
-
+            var dateOfTheMonth = (d.getDate() < 10 ? '0' : '') + d.getDate();
+            var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+            var nameOfTheMonth = months[d.getMonth()];
             //  temperature
             var temperature_celsius = (data.main.temp - 273.15).toFixed(1);
             var weather_main = data.weather[0].main;
@@ -86,7 +88,7 @@ $(document).ready(function () {
             var weather_icon = data.weather[0].icon;
             var dayOrNight = (weather_icon.charAt(2) == 'd' ? 'Daylight' : 'Night');
 
-            var weather_icon_img = `<img id="image" src="https://openweathermap.org/img/wn/${weather_icon}@2x.png" alt="No image loaded"/>`
+            var weather_icon_img = `<img id="image" src="https://openweathermap.org/img/wn/${weather_icon}@2x.png" alt="No image loaded"/>`;
             var feels_like = (data.main.feels_like - 273.15).toFixed(1);
             var temp_max = (data.main.temp_max - 273.15).toFixed(1);
             var temp_min = (data.main.temp_min - 273.15).toFixed(1);
@@ -94,6 +96,10 @@ $(document).ready(function () {
             var pressure = data.main.pressure; // measured in 'hPa'
             var temperature_fahrenheit = ((temperature_celsius * (9 / 5)) + 32).toFixed(1);
             var visibility = (data.visibility / 1000).toFixed(1);
+            // wind calculation - deg to compass AND meter/sec to kmph
+            var wind_deg_to_compass = `'${degToCompass(data.wind.deg)}'`;
+            var wind_speed_kmph = (data.wind.speed * 3.6).toFixed(1);
+            var wind = `${wind_deg_to_compass} ${wind_speed_kmph} km/h`;
 
             // display all hided elements, once the document is loaded and ready
             $('#w-info-section, #w-footer').show();
@@ -102,18 +108,18 @@ $(document).ready(function () {
             $('#w-status-loader').html(city + ', ' + fullCountryName);
             // DISPLAY logic in HTML
             $('#w-info1').html(city);
-            $('#w-info1-1').html(day + ', ' + hours + ':' + mins);
-            $('#w-info1-2').html(weather_main);
+            $('#w-info1-1').html(day + ' ' + nameOfTheMonth + ' ' + dateOfTheMonth + ', ' + hours + ':' + mins);
+            $('#w-info1-2').html(dayOrNight + ' of ' + weather_description);
 
-            $('#w-info2-1').html('Feels like ' + feels_like + '&#8451');
+            $('#w-info2-1').html(weather_main + ', Feels like ' + feels_like + '&#8451');
             $('#w-info2').html(weather_icon_img + temperature_celsius + '&#8451');
 
             $('#w-info2-1-1').html('H: ' + temp_max + '&#8451');
             $('#w-info2-1-2').html('L: ' + temp_min + '&#8451');
 
-            $('#w-info3-1').html(dayOrNight + ' with ' + weather_description);
+            $('#w-info3-1').html('Wind: ' + wind);
             $('#w-info3-2').html('Visibility: ' + visibility + 'kms');
-            $('#w-info3-3').html('Pressure: ' + pressure + 'hPa')
+            $('#w-info3-3').html('Pressure: ' + pressure + 'hPa');
             $('#w-info3-4').html('Humidity: ' + humidity + '%');
             $('.w-info-line').show();
             // Function to toggle Celsius to Fahrenheit
@@ -132,7 +138,7 @@ $(document).ready(function () {
                 });
             } else {
                 $('.weather-info, body').css({
-                    background: "linear-gradient(145deg, #0d47a1, #42a5f5)"
+                    background: "linear-gradient(145deg, #0d47a1, #3394e4)"
                 });
             }
             console.log(data);
@@ -140,11 +146,16 @@ $(document).ready(function () {
             .fail(function (error) {
                 console.log(error);
                 // json.error occured
-                var error_msg = 'STATUS: Error! Please try again.'
+                var error_msg = 'STATUS: Error! Please try again.';
                 $('#w-status-loader').html(error_msg);
                 $("#w-status-loader").css("color", "rgb(255, 194, 0)");
 
-            })
+            });
         $('#searchByCity').val(''); // clearing the input value
+    }
+    function degToCompass(num) {
+        var val = Math.floor((num / 22.5) + 0.5);
+        var arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+        return arr[(val % 16)];
     }
 }); // $(document).ready() ENDS

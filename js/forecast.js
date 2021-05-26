@@ -127,7 +127,7 @@ $(document).ready(function () {
                 var min_temperature = (data.daily[i].temp.min - 273.15).toFixed(0);
                 var image_icon = `<img width="45px" height="40px" src="https://openweathermap.org/img/wn/${data.daily[i].weather[0].icon}@2x.png">`;
                 // creating tr elements for the table
-                table += `<tr">`;
+                table += `<tr>`;
 
                 table += `<td class="pl-3">${day}, ${nameOfTheMonth} ${dateOfTheMonth}</td>`;
                 table += `<td>${max_temperature}&deg;C</td>`;

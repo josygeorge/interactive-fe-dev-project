@@ -8,8 +8,11 @@ body {
   max-width: 100%;
   overflow-x: hidden;
 }
+html {
+  height: 100%;
+}
 body {
-  min-height: 70vh;
+  min-height: 80vh;
   font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
   /* font-family: Tahoma, Verdana, Helvetica, Arial, sans-serif; */
   background-image: linear-gradient(to right, #0d47a1, #42a5f5);
@@ -58,7 +61,7 @@ select#dropdown {
   padding-top: 2.5rem;
   line-height: 0.6rem;
   border-radius: 0px !important;
-  min-height: 60vh;
+  min-height: 70vh;
   color: rgb(255, 255, 255);
   background-image: linear-gradient(to right, #0d47a1, #3394e4);
 }
@@ -85,7 +88,18 @@ hr.w-info-line {
   background-color: #347ae2;
   cursor: pointer;
 }
-
+.forecast-info {
+  padding-bottom: 2.5rem;
+  line-height: 0.6rem;
+  border-radius: 0px !important;
+  min-height: 70vh;
+}
+.forecast-info .table tbody td {
+  line-height: 1.5rem;
+}
 footer {
-  height: 100%;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }

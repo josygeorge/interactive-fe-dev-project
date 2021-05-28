@@ -4,7 +4,7 @@
 <br />
 <p>
   <h3 align="center">Main Project 1 - 2021 FSSD Jan - Aug Batch, Canadian Business College</h3>
-  <h5 align="center">This project is a part of the Full-Stack Software Development Diploma with Canadian Business College, Toronto and [codeinstitute](https://codeinstitute.net/full-stack-software-development-diploma/)</h5>
+  <h5 align="center">This project is a part of the Full-Stack Software Development Diploma with Canadian Business College, Toronto and Code Institute(https://codeinstitute.net/full-stack-software-development-diploma/)</h5>
   <p align="center">
     In this project, I have built a frontend-app using the technologies that I have learned throughout Interactive Frontend Development classes. This project is built based on the concept of weather apps, an application helps the user to know the current weather details and the forecast for the coming week.
     <br />

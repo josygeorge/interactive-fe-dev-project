@@ -57,12 +57,10 @@ $(document).ready(function () {
             $('#w-info-section-loader').hide();
         })// getJSON fails
             .fail(function (error) {
-                console.log(error);
                 // json.error occured
                 var error_msg = 'STATUS: Error! Please try again.';
                 $('#w-status-loader').html(error_msg);
                 $("#w-status-loader").css("color", "rgb(255, 194, 0)");
-
             });
     }
 
@@ -111,12 +109,10 @@ $(document).ready(function () {
             displayForecast(urlUsingCoord, searchCity, countryCode);
         })// getJSON fails
             .fail(function (error) {
-                console.log(error);
                 // json.error occured
                 var error_msg = 'STATUS: Error! Please try again.';
                 $('#w-status-loader').html(error_msg);
                 $("#w-status-loader").css("color", "rgb(255, 194, 0)");
-
             });
     }
 
@@ -170,12 +166,10 @@ $(document).ready(function () {
             $('#w-status-loader').html(city + ', ' + fullCountryName);
         })// getJSON fails
             .fail(function (error) {
-                console.log(error);
                 // json.error occured
                 var error_msg = 'STATUS: Error! Please try again.';
                 $('#w-status-loader').html(error_msg);
                 $("#w-status-loader").css("color", "rgb(255, 194, 0)");
-
             });
         $('#searchByCity').val(''); // clearing the input value
         $('#countries-dropdown').val(0); // resetting the select value

@@ -178,5 +178,6 @@ $(document).ready(function () {
 
             });
         $('#searchByCity').val(''); // clearing the input value
+        $('#countries-dropdown').val(0); // resetting the select value
     }
 }); // $(document).ready() ENDS

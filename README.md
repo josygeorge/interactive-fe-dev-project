@@ -1,9 +1,10 @@
-# Interactive Frontend Development Project
+# Interactive Frontend Development Project, May 28 -2021.
 
 <!-- ASSIGNMENT INTRO -->
 <br />
 <p>
   <h3 align="center">Main Project 1 - 2021 FSSD Jan - Aug Batch, Canadian Business College</h3>
+  <h5 align="center">This project is a part of the Full-Stack Software Development Diploma with Canadian Business College, Toronto and [codeinstitute](https://codeinstitute.net/full-stack-software-development-diploma/)</h5>
   <p align="center">
     In this project, I have built a frontend-app using the technologies that I have learned throughout Interactive Frontend Development classes. This project is built based on the concept of weather apps, an application helps the user to know the current weather details and the forecast for the coming week.
     <br />
@@ -26,12 +27,13 @@
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
+      <li><a href="#coding-and-testing">Coding and Testing</a></li>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#git-installation">GIT Installation</a></li>
+        <li><a href="#git-usage">GIT Usage</a></li>
       </ul>
     </li>
-    <li><a href="#git-usage">GIT Usage</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
@@ -88,6 +90,12 @@ The project has the following file structure.
 - assets -> img -> has images for carousal slider.
 - README.md
 
+## Coding and Testing
+
+- On coding, each functionality unit is being logically designed, implemented followed with it's unit testing
+- Also, section wise testing have been done on each module / pages.
+- Coding vs Testing timeframe can be defined as 60 : 40 % ratio.
+
 ### Prerequisites
 
 - A basic knowledge in the following is required.
@@ -129,7 +137,7 @@ The project has the following file structure.
 
 <!-- USAGE EXAMPLES -->
 
-## GIT Usage
+### GIT Usage
 
 1. Add the files
    ```sh
@@ -164,3 +172,5 @@ Josy George - [@github](https://github.com/josygeorge/)
 - [Mozilla.Org](https://developer.mozilla.org/en-US/docs/Web/Guide/)
 - [W3 Schools](https://www.w3schools.com)
 - [Instructor Notes](https://github.com/anmarjarjees?tab=repositories)
+- [Technical Content Provider](https://codeinstitute.net/full-stack-software-development-diploma/)
+- [Management - Canadian Business College](https://canadianbusinesscollege.com/)

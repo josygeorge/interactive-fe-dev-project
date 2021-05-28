@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forecast</title>
+
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
         type="text/css" />
     <link rel="stylesheet" href="css/style.css">
+    <title>Forecast</title>
 </head>
 
 <body>
@@ -57,25 +58,33 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-12 text-center text-white pt-3 top">
-                        <h1 class="text-uppercase">Week's Forecast </h1>
-                        <hr class="line">
-                        <h4 id="w-status-loader" class="pt-3">Loading...</h5>
+                        <h2 class="text-uppercase">Week's Forecast </h1>
+                            <hr class="line">
+                            <h3 id="w-status-loader" class="pt-3">Loading...</h5>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Search Section -->
-        <section id="w-search-for-today-weather">
+        <section id="w-search-for-forecast-of-the-week">
             <div class="container-fluid">
-                <div class="row text-center city-search py-1">
-                    <div class="col-sm-12">
-                        <p class="mb-0 pt-3">
+
+                <div class="row text-center city-search py-1 ">
+                    <div class="col-sm-12 ">
+                        <p class="mb-0 pt-1">
                             <label class="mb-0">Search your city*</label>
                         </p>
-                        <input type="text" id="searchByCity" name="city" autocomplete="off"
-                            placeholder="e.g. Toronto" />
+                        <input type="text" id="searchByCity" name="city" autocomplete="off" placeholder="e.g. Toronto"
+                            class="text-center" />
+                    </div>
+                    <div class="col-sm-12 my-1">
+                        <select name="countries" id="countries-dropdown">
+                            <option value="0">Select Country (Optional)</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-12">
                         <button id="searchButton" class="btn btn-primary border-light">
-                            <i class="fa fa-search" aria-hidden="true"></i>
+                            Search &nbsp;<i class="fa fa-search" aria-hidden="true"></i>
                         </button>
                     </div>
                 </div>
@@ -91,7 +100,6 @@
         </div>
         <!-- Information Section -->
         <section id="w-info-section">
-            <!-- <div class="container-fluid"> -->
             <div class="row text-center forecast-info">
                 <table class="table">
                     <thead class="bg-dark text-light">

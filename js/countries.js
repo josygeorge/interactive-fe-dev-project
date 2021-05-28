@@ -39,7 +39,7 @@ cData = [
             },
             {
                 "Code": "AG",
-                "Name": "Antigua and Barbuda"
+                "Name": "Antigua n' Barbuda"
             },
             {
                 "Code": "AR",
@@ -107,15 +107,15 @@ cData = [
             },
             {
                 "Code": "BO",
-                "Name": "Bolivia, Plurinational State of"
+                "Name": "Bolivia"
             },
             {
                 "Code": "BQ",
-                "Name": "Bonaire, Sint Eustatius and Saba"
+                "Name": "Bonaire"
             },
             {
                 "Code": "BA",
-                "Name": "Bosnia and Herzegovina"
+                "Name": "Bosnia & Herzegovina"
             },
             {
                 "Code": "BW",
@@ -131,11 +131,11 @@ cData = [
             },
             {
                 "Code": "IO",
-                "Name": "British Indian Ocean Territory"
+                "Name": "British IOT"
             },
             {
                 "Code": "BN",
-                "Name": "Brunei Darussalam"
+                "Name": "Brunei"
             },
             {
                 "Code": "BG",
@@ -171,7 +171,7 @@ cData = [
             },
             {
                 "Code": "CF",
-                "Name": "Central African Republic"
+                "Name": "Central African Rep."
             },
             {
                 "Code": "TD",
@@ -191,7 +191,7 @@ cData = [
             },
             {
                 "Code": "CC",
-                "Name": "Cocos (Keeling) Islands"
+                "Name": "Cocos(Keeling)Islands"
             },
             {
                 "Code": "CO",
@@ -207,7 +207,7 @@ cData = [
             },
             {
                 "Code": "CD",
-                "Name": "Congo, the Democratic Republic of the"
+                "Name": "Congo"
             },
             {
                 "Code": "CK",
@@ -287,7 +287,7 @@ cData = [
             },
             {
                 "Code": "FK",
-                "Name": "Falkland Islands (Malvinas)"
+                "Name": "Falkland Islands"
             },
             {
                 "Code": "FO",
@@ -315,7 +315,7 @@ cData = [
             },
             {
                 "Code": "TF",
-                "Name": "French Southern Territories"
+                "Name": "French Southern"
             },
             {
                 "Code": "GA",
@@ -387,11 +387,11 @@ cData = [
             },
             {
                 "Code": "HM",
-                "Name": "Heard Island and McDonald Islands"
+                "Name": "Heard Island"
             },
             {
                 "Code": "VA",
-                "Name": "Holy See (Vatican City State)"
+                "Name": "Vatican City"
             },
             {
                 "Code": "HN",
@@ -419,7 +419,7 @@ cData = [
             },
             {
                 "Code": "IR",
-                "Name": "Iran, Islamic Republic of"
+                "Name": "Iran"
             },
             {
                 "Code": "IQ",
@@ -471,7 +471,7 @@ cData = [
             },
             {
                 "Code": "KP",
-                "Name": "Korea, Democratic People's Republic of"
+                "Name": "Korea,People's Rep."
             },
             {
                 "Code": "KR",
@@ -487,7 +487,7 @@ cData = [
             },
             {
                 "Code": "LA",
-                "Name": "Lao People's Democratic Republic"
+                "Name": "Lao People's Rep."
             },
             {
                 "Code": "LV",
@@ -527,7 +527,7 @@ cData = [
             },
             {
                 "Code": "MK",
-                "Name": "Macedonia, the Former Yugoslav Republic of"
+                "Name": "Macedonia"
             },
             {
                 "Code": "MG",
@@ -579,11 +579,11 @@ cData = [
             },
             {
                 "Code": "FM",
-                "Name": "Micronesia, Federated States of"
+                "Name": "Micronesia"
             },
             {
                 "Code": "MD",
-                "Name": "Moldova, Republic of"
+                "Name": "Moldova"
             },
             {
                 "Code": "MC",
@@ -659,7 +659,7 @@ cData = [
             },
             {
                 "Code": "MP",
-                "Name": "Northern Mariana Islands"
+                "Name": "N.Mariana Islands"
             },
             {
                 "Code": "NO",
@@ -679,7 +679,7 @@ cData = [
             },
             {
                 "Code": "PS",
-                "Name": "Palestine, State of"
+                "Name": "Palestine"
             },
             {
                 "Code": "PA",
@@ -739,15 +739,15 @@ cData = [
             },
             {
                 "Code": "BL",
-                "Name": "Saint Barth\u00e9lemy"
+                "Name": "St. Barth\u00e9lemy"
             },
             {
                 "Code": "SH",
-                "Name": "Saint Helena, Ascension and Tristan da Cunha"
+                "Name": "Saint Helena"
             },
             {
                 "Code": "KN",
-                "Name": "Saint Kitts and Nevis"
+                "Name": "Saint Kitts & Nevis"
             },
             {
                 "Code": "LC",
@@ -755,15 +755,15 @@ cData = [
             },
             {
                 "Code": "MF",
-                "Name": "Saint Martin (French part)"
+                "Name": "Saint Martin"
             },
             {
                 "Code": "PM",
-                "Name": "Saint Pierre and Miquelon"
+                "Name": "Saint Pierre n' Miquelon"
             },
             {
                 "Code": "VC",
-                "Name": "Saint Vincent and the Grenadines"
+                "Name": "St.Vincent d' Grenad"
             },
             {
                 "Code": "WS",
@@ -775,7 +775,7 @@ cData = [
             },
             {
                 "Code": "ST",
-                "Name": "Sao Tome and Principe"
+                "Name": "Sao Tome n' Principe"
             },
             {
                 "Code": "SA",
@@ -803,7 +803,7 @@ cData = [
             },
             {
                 "Code": "SX",
-                "Name": "Sint Maarten (Dutch part)"
+                "Name": "Sint Maarten"
             },
             {
                 "Code": "SK",
@@ -827,7 +827,7 @@ cData = [
             },
             {
                 "Code": "GS",
-                "Name": "South Georgia and the South Sandwich Islands"
+                "Name": "South Georgia"
             },
             {
                 "Code": "SS",
@@ -851,7 +851,7 @@ cData = [
             },
             {
                 "Code": "SJ",
-                "Name": "Svalbard and Jan Mayen"
+                "Name": "Svalbard JanMayen"
             },
             {
                 "Code": "SZ",
@@ -867,11 +867,11 @@ cData = [
             },
             {
                 "Code": "SY",
-                "Name": "Syrian Arab Republic"
+                "Name": "Syria"
             },
             {
                 "Code": "TW",
-                "Name": "Taiwan, Province of China"
+                "Name": "Taiwan"
             },
             {
                 "Code": "TJ",
@@ -879,7 +879,7 @@ cData = [
             },
             {
                 "Code": "TZ",
-                "Name": "Tanzania, United Republic of"
+                "Name": "Tanzania"
             },
             {
                 "Code": "TH",
@@ -903,7 +903,7 @@ cData = [
             },
             {
                 "Code": "TT",
-                "Name": "Trinidad and Tobago"
+                "Name": "Trinidad n Tobago"
             },
             {
                 "Code": "TN",
@@ -919,7 +919,7 @@ cData = [
             },
             {
                 "Code": "TC",
-                "Name": "Turks and Caicos Islands"
+                "Name": "TurksCaicos Islands"
             },
             {
                 "Code": "TV",
@@ -947,7 +947,7 @@ cData = [
             },
             {
                 "Code": "UM",
-                "Name": "United States Minor Outlying Islands"
+                "Name": "US Minor Islands"
             },
             {
                 "Code": "UY",
@@ -963,7 +963,7 @@ cData = [
             },
             {
                 "Code": "VE",
-                "Name": "Venezuela, Bolivarian Republic of"
+                "Name": "Venezuela"
             },
             {
                 "Code": "VN",
@@ -971,15 +971,15 @@ cData = [
             },
             {
                 "Code": "VG",
-                "Name": "Virgin Islands, British"
+                "Name": "Virgin Is.,GB"
             },
             {
                 "Code": "VI",
-                "Name": "Virgin Islands, U.S."
+                "Name": "Virgin Is.,US"
             },
             {
                 "Code": "WF",
-                "Name": "Wallis and Futuna"
+                "Name": "Wallis n' Futuna"
             },
             {
                 "Code": "EH",

@@ -5,11 +5,20 @@ $(document).ready(function () {
     ---------------------------------------------------------- */
     $('#w-info-section, #w-footer').hide();
 
+    // 2. -----Populating countries from json of (countries.js) file
+    var countries = cData[0].countries;
+    var option = '';
+    for (var i = 0; i < countries.length; i++) {
+        option += '<option value="' + countries[i].Code + '">' + countries[i].Name + '</option>';
+    }
+    // populating to dropdown /select box
+    $('#countries-dropdown').append(option);
+
     // API - Vendor - https://api.openweathermap.org - API KEY
     var API_KEY = 'c5092302f0f7bd470d36351ce8a0f211';
 
     /* -------------------------------------------------------------------------
-        2. ---- On window loading ----
+        3. ---- On window loading ----
         load the 7-day forecast of the current location based on 'lat' and 'lon'
     --------------------------------------------------------------------------- */
     if (navigator.geolocation) {
@@ -17,7 +26,7 @@ $(document).ready(function () {
         var currentPosition = '';
         navigator.geolocation.getCurrentPosition(function (position) {
             currentPosition = position;
-            //  console.log(currentPosition);
+            // console.log(currentPosition);
             //  Set 'lat' and 'lon'
             var latitude = currentPosition.coords.latitude;
             var longitude = currentPosition.coords.longitude;
@@ -30,18 +39,28 @@ $(document).ready(function () {
     }
 
     /* ----------------------------------------------------------------------
-        3. ----- On city search and button click load the searched data -----
+        4. ----- On city search and button click load the searched data -----
         // search location / city
     ---------------------------------------------------------------------- */
     $(document).on('click', '#searchButton', function (e) {
         e.preventDefault();
         $('#w-status-loader').show();
         $('#w-status-loader').html('STATUS: Loading...');
+
         // Get the input value
-        var searchCity = document.getElementById("searchByCity");
+        var searchCityElement = document.getElementById("searchByCity");
         // Testing
         // console.log("You clicked the element: " + searchCity.value);
-        searchCity = searchCity.value;
+
+        searchCity = searchCityElement.value;
+        // get the country event of Select dropdown
+        var selectEvent = document.getElementById("countries-dropdown");
+        var selectedCountry = selectEvent.value;
+        // if country selected, append it to searchCity and pass to the api url
+        if (selectedCountry != 0) {
+            searchCity = searchCity + ', ' + selectedCountry;
+        }
+        // API call
         var url = `https://api.openweathermap.org/data/2.5/weather?appid=${API_KEY}&q=${searchCity}`;
         // calling function by passing the url as argument
         displayWeather(url);
@@ -62,9 +81,7 @@ $(document).ready(function () {
             // destructuring data
             var country = data.sys.country;
             var city = data.name;
-
-            // getting full country name from the custom 'countries.js' file
-            var countries = cData[0].countries;
+            // finding country name by comparing it's code
             var fullCountryName = '';
             for (var x = 0; x < countries.length; x++) {
                 if (countries[x].Code == country) {
@@ -104,33 +121,36 @@ $(document).ready(function () {
             // display all hided elements, once the document is loaded and ready
             $('#w-info-section, #w-footer').show();
             // display city and full country name
-            $("#w-status-loader").css("color", "rgb(102, 250, 60)");
+            $("#w-status-loader").css("color", "rgb(35, 211, 124)");
             $('#w-status-loader').html(city + ', ' + fullCountryName);
             // DISPLAY logic in HTML
             $('#w-info1').html(city);
             $('#w-info1-1').html(day + ' ' + nameOfTheMonth + ' ' + dateOfTheMonth + ', ' + hours + ':' + mins);
-            $('#w-info1-2').html(dayOrNight + ' of ' + weather_description);
+            $('#w-info1-2').html(dayOrNight + ' w/ ' + weather_description);
 
             $('#w-info2-1').html(weather_main + ', Feels like ' + feels_like + '&#8451');
-            $('#w-info2').html(weather_icon_img + temperature_celsius + '&#8451');
+            $('#w-info2').html(weather_icon_img + temperature_celsius + '℃');
 
             $('#w-info2-1-1').html('H: ' + temp_max + '&#8451');
             $('#w-info2-1-2').html('L: ' + temp_min + '&#8451');
 
             $('#w-info3-1').html('Wind: ' + wind);
-            $('#w-info3-2').html('Visibility: ' + visibility + 'kms');
-            $('#w-info3-3').html('Pressure: ' + pressure + 'hPa');
+            $('#w-info3-2').html('Visibility: ' + visibility + ' km');
+            $('#w-info3-3').html('Pressure: ' + pressure + ' hPa');
             $('#w-info3-4').html('Humidity: ' + humidity + '%');
             $('.w-info-line').show();
-            // Function to toggle Celsius to Fahrenheit
-            $('#w-info2').click(function () {
+            // Function to toggle b/w Celsius to Fahrenheit
+            $('#w-info2').off().on("click", function () {
                 if (document.getElementById("w-info2").textContent == (temperature_celsius + '℃')) {
                     $('#w-info2').html(weather_icon_img + temperature_fahrenheit + '\xB0F');
+                    return false;
                 }
                 else {
-                    $('#w-info2').html(weather_icon_img + temperature_celsius + '&#8451');
+                    $('#w-info2').html(weather_icon_img + temperature_celsius + '℃');
+                    return false;
                 }
             });
+
             // Condition to display bg gradient color based on night and day
             if (dayOrNight == 'Night') {
                 $('.weather-info, body').css({
@@ -151,6 +171,7 @@ $(document).ready(function () {
 
             });
         $('#searchByCity').val(''); // clearing the input value
+        $('#countries-dropdown').val(0); // resetting the select value
     }
     function degToCompass(num) {
         var val = Math.floor((num / 22.5) + 0.5);

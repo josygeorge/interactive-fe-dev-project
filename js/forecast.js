@@ -5,11 +5,20 @@ $(document).ready(function () {
     ---------------------------------------------------------- */
     $('#w-info-section, #w-footer').hide();
 
+    // 2. -----Populating countries from json of (countries.js) file
+    var countries = cData[0].countries;
+    var option = '';
+    for (var i = 0; i < countries.length; i++) {
+        option += '<option value="' + countries[i].Code + '">' + countries[i].Name + '</option>';
+    }
+    // populating to dropdown /select box
+    $('#countries-dropdown').append(option);
+
     // API - Vendor - https://api.openweathermap.org - API KEY
     var API_KEY = 'c5092302f0f7bd470d36351ce8a0f211';
 
     /* -------------------------------------------------------------------------
-        2. ---- On window loading ----
+        3. ---- On window loading ----
         load the 7-day forecast of the current location based on 'lat' and 'lon'
     --------------------------------------------------------------------------- */
     if (navigator.geolocation) {
@@ -58,7 +67,7 @@ $(document).ready(function () {
     }
 
     /* ----------------------------------------------------------------------
-        3. ----- On city search and button click load the searched data -----
+        4. ----- On city search and button click load the searched data -----
         // search location / city
     ---------------------------------------------------------------------- */
     $(document).on('click', '#searchButton', function (e) {
@@ -66,10 +75,19 @@ $(document).ready(function () {
         $('#w-status-loader').show();
         $('#w-status-loader').html('STATUS: Loading...');
         // Get the input value
-        var searchCity = document.getElementById("searchByCity");
+        var searchCityElement = document.getElementById("searchByCity");
         // Testing
         // console.log("You clicked the element: " + searchCity.value);
-        searchCity = searchCity.value;
+        searchCity = searchCityElement.value;
+        // get the country event of Select dropdown
+        var selectEvent = document.getElementById("countries-dropdown");
+        var selectedCountry = selectEvent.value;
+        // if country selected, append it to searchCity and pass to the api url
+        if (selectedCountry != 0) {
+            searchCity = searchCity + ', ' + selectedCountry;
+        }
+
+        // API call
         var url = `https://api.openweathermap.org/data/2.5/weather?appid=${API_KEY}&q=${searchCity}`;
         /* ----------------------------------------------------------------
         first call this function to get coord data on city value. 
@@ -139,8 +157,8 @@ $(document).ready(function () {
             $("#forecastWeather").html(table);
             // display all hided elements, once the document is loaded and ready
             $('#w-info-section, #w-footer').show();
-            // getting full country name from the custom 'countries.js' file
-            var countries = cData[0].countries;
+
+            // finding country name by comparing it's code
             var fullCountryName = '';
             for (var x = 0; x < countries.length; x++) {
                 if (countries[x].Code == countryCode) {
@@ -148,7 +166,7 @@ $(document).ready(function () {
                 }
             }
             // display city and full country name
-            $("#w-status-loader").css("color", "rgb(102, 250, 60)");
+            $("#w-status-loader").css("color", "rgb(35, 211, 124)");
             $('#w-status-loader').html(city + ', ' + fullCountryName);
         })// getJSON fails
             .fail(function (error) {

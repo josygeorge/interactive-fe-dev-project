@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Today's current weather</title>
+
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
         type="text/css" />
     <link rel="stylesheet" href="css/style.css">
+
+    <title>Today's current weather</title>
 </head>
 
 <body>
@@ -57,9 +59,9 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-12 text-center text-white pt-3 top">
-                        <h1 class="text-uppercase">Today's Weather</h1>
+                        <h2 class="text-uppercase">Today's Weather</h2>
                         <hr class="line">
-                        <h4 id="w-status-loader" class="pt-3">Loading...</h4>
+                        <h3 id="w-status-loader" class="pt-3">Loading...</h3>
                     </div>
                 </div>
             </div>
@@ -68,15 +70,22 @@
         <!-- Search Section -->
         <section id="w-search-for-today-weather">
             <div class="container-fluid">
-                <div class="row text-center city-search py-1">
-                    <div class="col-sm-12">
-                        <p class="mb-0 pt-3">
+                <div class="row text-center city-search py-1 ">
+                    <div class="col-sm-12 ">
+                        <p class="mb-0 pt-1">
                             <label class="mb-0">Search your city*</label>
                         </p>
-                        <input type="text" id="searchByCity" name="city" autocomplete="off"
-                            placeholder="e.g. Toronto" />
+                        <input type="text" id="searchByCity" name="city" autocomplete="off" placeholder="e.g. Toronto"
+                            class="text-center" />
+                    </div>
+                    <div class="col-sm-12 my-1">
+                        <select name="countries" id="countries-dropdown">
+                            <option value="0">Select Country (Optional)</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-12">
                         <button id="searchButton" class="btn btn-primary border-light">
-                            <i class="fa fa-search" aria-hidden="true"></i>
+                            Search &nbsp;<i class="fa fa-search" aria-hidden="true"></i>
                         </button>
                     </div>
                 </div>
@@ -100,13 +109,14 @@
                     <hr class="w-info-line">
                     <h5 id="w-info1-1"></h5>
                     <hr class="w-info-line">
-                    <h5 id="w-info1-2"></h5>
+                    <h5 id="w-info1-2" class="pl-3"></h5>
                     <hr class="w-info-line">
                 </div>
                 <!-- Center -->
                 <div class="col-sm-12 col-md-4 py-1">
                     <h6 id="w-info2-1"></h6>
-                    <h2 id="w-info2" class="shadow-lg mx-5 pr-2 rounded"></h2>
+                    <h2 id="w-info2" class="shadow-lg mx-5 pr-2 rounded" data-toggle="tooltip" data-placement="top"
+                        title="Click to change the degree unit"></h2>
                     <div class="row">
                         <div class="col-xs-12 col-sm-6">
                             <h5 id="w-info2-1-1"></h5>
@@ -145,6 +155,7 @@
             </div>
         </div>
     </footer>
+
 
     <!--External JS-->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

@@ -4,7 +4,9 @@
 <br />
 <p>
   <h3 align="center">Main Project 1 - 2021 FSSD Jan - Aug Batch, Canadian Business College</h3>
+  <br />
   <h5 align="center">This project is a part of the Full-Stack Software Development Diploma with Canadian Business College, Toronto and Code Institute(https://codeinstitute.net/full-stack-software-development-diploma/)</h5>
+  <br />
   <p align="center">
     In this project, I have built a frontend-app using the technologies that I have learned throughout Interactive Frontend Development classes. This project is built based on the concept of weather apps, an application helps the user to know the current weather details and the forecast for the coming week.
     <br />
@@ -27,16 +29,16 @@
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <li><a href="#coding-and-testing">Coding and Testing</a></li>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#git-installation">GIT Installation</a></li>
         <li><a href="#git-usage">GIT Usage</a></li>
       </ul>
     </li>
+    <li><a href="#coding-and-testing">Coding and Testing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#credits-and-acknowledgements">Credits and Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -89,12 +91,6 @@ The project has the following file structure.
     - This js file is a custom file which has all the country codes and it's full names. This script is used in both weather.js and forecast.js for finding country names thorugh looping functionality.
 - assets -> img -> has images for carousal slider.
 - README.md
-
-## Coding and Testing
-
-- On coding, each functionality unit is being logically designed, implemented followed with it's unit testing
-- Also, section wise testing have been done on each module / pages.
-- Coding vs Testing timeframe can be defined as 60 : 40 % ratio.
 
 ### Prerequisites
 
@@ -152,6 +148,16 @@ The project has the following file structure.
    git push origin main
    ```
 
+## Coding and Testing
+
+- On coding, each functionality as a unit is being logically designed, implemented, followed with it's
+  - Unit testing and
+  - Use case testing.
+    - Use case testing helps tester to identify the testing scope at acceptance level.
+    - Unit testing is a method by which individual units of source code are tested to determine if they are fit for use. Unit testing helps in simplifying the debugging process.
+- Also, section wise testing have been done on each module / pages.
+- Coding vs Testing timeframe can be defined as 60 : 40 % ratio.
+
 <!-- LICENSE -->
 
 ## License
@@ -166,11 +172,11 @@ Josy George - [@github](https://github.com/josygeorge/)
 
 <!-- ACKNOWLEDGEMENTS -->
 
-## Acknowledgements
+## Credits and Acknowledgements
 
 - [Stack Overflow](https://stackoverflow.com)
 - [Mozilla.Org](https://developer.mozilla.org/en-US/docs/Web/Guide/)
 - [W3 Schools](https://www.w3schools.com)
-- [Instructor Notes](https://github.com/anmarjarjees?tab=repositories)
+- [Instructor's (Anmar Jarjees) Notes](https://github.com/anmarjarjees?tab=repositories)
 - [Technical Content Provider](https://codeinstitute.net/full-stack-software-development-diploma/)
 - [Management - Canadian Business College](https://canadianbusinesscollege.com/)

@@ -107,6 +107,13 @@ footer {
   bottom: 0;
   width: 100%;
 }
+.tooltip.primary .tooltip-inner {
+  background-color: #337ab7;
+}
+.tooltip.primary.top > .tooltip-arrow {
+  border-top-color: #337ab7;
+}
+
 /* Responsive for smaller devices */
 @media only screen and (max-width: 767px) {
   input[type='text'],
